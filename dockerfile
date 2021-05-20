@@ -3,4 +3,4 @@ WORKDIR /testing-web-logger
 COPY . .
 RUN go get -d ./...
 RUN go build
-CMD [ "main.go" ]
+CMD [ "./testing-web-logger" ]
