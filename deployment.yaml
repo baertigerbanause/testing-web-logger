@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testing-web-logger
+  labels:
+    name: testing-web-logger
+spec:
+  containers:
+  - name: testing-web-logger
+    image: baertigerbanause/testing-web-logger:small
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 6443
